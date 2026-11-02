@@ -1,0 +1,10 @@
+
+.nodeset v(my)=0.65 v(mx)=0.65 v(p)=1.15
+.control
+save all @r1[i]
+dc temp -10 120 1
+let vctat = 15.4k/15k * v(my)
+let vptat = 15.4k * @r1[i]
+let vsum = vctat + vptat
+plot vctat vptat vsum vout ylabel 'Voltage (V)' title 'Vref = CTAT + PTAT'
+.endc"
