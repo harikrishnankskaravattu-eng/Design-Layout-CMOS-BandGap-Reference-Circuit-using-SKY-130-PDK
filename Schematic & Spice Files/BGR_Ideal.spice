@@ -1,0 +1,41 @@
+** sch_path: /foss/designs/BGR_Ideal.sch
+**.subckt BGR_Ideal
+I0 net2 0 50u
+Q1 0 0 my QPNP area=4
+Q2 0 0 net3 QPNP area=64
+R1 mx net3 2k
+vdd vdd 0 1.8
+R2 my 0 15k
+R3 mx 0 15k
+RL vout 0 15.4k
+* noconn vout
+M1 my p vdd vdd PMOS1 w=5u l=0.18u
+M3 vout p vdd vdd PMOS1 w=5u l=0.18u
+Ma net1 net1 vdd vdd PMOS1 w=5u l=0.18u
+Mb p net1 vdd vdd PMOS1 w=5u l=0.18u
+Mx net1 mx net2 0 NMOS1 w=5u l=0.18u
+My p my net2 0 NMOS1 w=5u l=0.18u
+M2 mx p vdd vdd PMOS1 w=5u l=0.18u
+**** begin user architecture code
+
+
+.model NMOS1 NMOS LEVEL=1 VTO=0.45 KP=200u LAMBDA=0.02
+.model PMOS1 PMOS LEVEL=1 VTO=-0.45 KP=80u LAMBDA=0.02
+.model QPNP PNP (IS=1e-16 BF=50 VAF=50)
+
+
+
+
+.nodeset v(my)=0.65 v(mx)=0.65 v(p)=1.15
+.control
+save all @r1[i]
+dc temp -10 120 1
+let vctat = 15.4k/15k * v(my)
+let vptat = 15.4k * @r1[i]
+let vsum = vctat + vptat
+plot vctat vptat vsum vout ylabel 'Voltage (V)' title 'Vref = CTAT + PTAT'
+.endc
+
+**** end user architecture code
+**.ends
+.end
