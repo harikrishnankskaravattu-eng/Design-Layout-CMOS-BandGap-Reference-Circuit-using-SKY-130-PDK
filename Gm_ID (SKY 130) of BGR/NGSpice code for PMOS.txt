@@ -1,0 +1,216 @@
+name=NGSPICE
+only_toplevel=true
+value="
+.option wnflag=1
+.option savecurrents
+
+.control
+
+
+
+*M1
+save @m.xm1.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm1.msky130_fd_pr__pfet_01v8[id]
+save @m.xm1.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm1.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm1.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm1.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm1.msky130_fd_pr__pfet_01v8[vth]
+
+*M2
+save @m.xm2.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm2.msky130_fd_pr__pfet_01v8[id]
+save @m.xm2.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm2.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm2.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm2.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm2.msky130_fd_pr__pfet_01v8[vth]
+
+*M3
+save @m.xm3.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm3.msky130_fd_pr__pfet_01v8[id]
+save @m.xm3.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm3.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm3.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm3.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm3.msky130_fd_pr__pfet_01v8[vth]
+
+*M4
+save @m.xm4.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm4.msky130_fd_pr__pfet_01v8[id]
+save @m.xm4.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm4.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm4.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm4.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm4.msky130_fd_pr__pfet_01v8[vth]
+
+
+*M5
+save @m.xm5.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm5.msky130_fd_pr__pfet_01v8[id]
+save @m.xm5.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm5.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm5.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm5.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm5.msky130_fd_pr__pfet_01v8[vth]
+
+*M6
+save @m.xm6.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm6.msky130_fd_pr__pfet_01v8[id]
+save @m.xm6.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm6.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm6.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm6.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm6.msky130_fd_pr__pfet_01v8[vth]
+
+*M7
+save @m.xm7.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm7.msky130_fd_pr__pfet_01v8[id]
+save @m.xm7.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm7.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm7.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm7.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm7.msky130_fd_pr__pfet_01v8[vth]
+
+*M8
+save @m.xm8.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm8.msky130_fd_pr__pfet_01v8[id]
+save @m.xm8.msky130_fd_pr__pfet_01v8[vgs]
+save @m.xm8.msky130_fd_pr__pfet_01v8[gds]
+save @m.xm8.msky130_fd_pr__pfet_01v8[cgg]
+save @m.xm8.msky130_fd_pr__pfet_01v8[vds]
+save @m.xm8.msky130_fd_pr__pfet_01v8[vth]
+
+
+remzerovec
+dc vg 0.05 1.8 0.01
+
+write sky130_pmos.raw
+
+wrdata sky130_pmos1.txt
++ @m.xm1.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm1.msky130_fd_pr__pfet_01v8[id]
++ @m.xm1.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm1.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm1.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm1.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm1.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos2.txt
++ @m.xm2.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm2.msky130_fd_pr__pfet_01v8[id]
++ @m.xm2.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm2.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm2.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm2.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm2.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos3.txt
++ @m.xm3.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm3.msky130_fd_pr__pfet_01v8[id]
++ @m.xm3.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm3.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm3.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm3.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm3.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos4.txt
++ @m.xm4.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm4.msky130_fd_pr__pfet_01v8[id]
++ @m.xm4.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm4.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm4.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm4.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm4.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos5.txt
++ @m.xm5.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm5.msky130_fd_pr__pfet_01v8[id]
++ @m.xm5.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm5.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm5.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm5.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm5.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos6.txt
++ @m.xm6.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm6.msky130_fd_pr__pfet_01v8[id]
++ @m.xm6.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm6.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm6.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm6.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm6.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos7.txt
++ @m.xm7.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm7.msky130_fd_pr__pfet_01v8[id]
++ @m.xm7.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm7.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm7.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm7.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm7.msky130_fd_pr__pfet_01v8[vth]
+
+wrdata sky130_pmos8.txt
++ @m.xm8.msky130_fd_pr__pfet_01v8[gm]
++ @m.xm8.msky130_fd_pr__pfet_01v8[id]
++ @m.xm8.msky130_fd_pr__pfet_01v8[vgs]
++ @m.xm8.msky130_fd_pr__pfet_01v8[gds]
++ @m.xm8.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xm8.msky130_fd_pr__pfet_01v8[vds]
++ @m.xm8.msky130_fd_pr__pfet_01v8[vth]
+
+
+let gmid1= @m.xm1.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm1.msky130_fd_pr__pfet_01v8[id])
+let gmid2= @m.xm2.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm2.msky130_fd_pr__pfet_01v8[id])
+let gmid3= @m.xm3.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm3.msky130_fd_pr__pfet_01v8[id])
+let gmid4= @m.xm4.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm4.msky130_fd_pr__pfet_01v8[id])
+let gmid5= @m.xm5.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm5.msky130_fd_pr__pfet_01v8[id])
+let gmid6= @m.xm6.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm6.msky130_fd_pr__pfet_01v8[id])
+let gmid7= @m.xm7.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm7.msky130_fd_pr__pfet_01v8[id])
+let gmid8= @m.xm8.msky130_fd_pr__pfet_01v8[gm]/abs(@m.xm8.msky130_fd_pr__pfet_01v8[id])
+
+let vov1= abs(@m.xm1.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm1.msky130_fd_pr__pfet_01v8[vth])
+let vov2= abs(@m.xm2.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm2.msky130_fd_pr__pfet_01v8[vth])
+let vov3= abs(@m.xm3.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm3.msky130_fd_pr__pfet_01v8[vth])
+let vov4= abs(@m.xm4.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm4.msky130_fd_pr__pfet_01v8[vth])
+let vov5= abs(@m.xm5.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm5.msky130_fd_pr__pfet_01v8[vth])
+let vov6= abs(@m.xm6.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm6.msky130_fd_pr__pfet_01v8[vth])
+let vov7= abs(@m.xm7.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm7.msky130_fd_pr__pfet_01v8[vth])
+let vov8= abs(@m.xm8.msky130_fd_pr__pfet_01v8[vgs])-abs(@m.xm8.msky130_fd_pr__pfet_01v8[vth])
+
+let gmgds1= @m.xm1.msky130_fd_pr__pfet_01v8[gm]/@m.xm1.msky130_fd_pr__pfet_01v8[gds]
+let gmgds2= @m.xm2.msky130_fd_pr__pfet_01v8[gm]/@m.xm2.msky130_fd_pr__pfet_01v8[gds]
+let gmgds3= @m.xm3.msky130_fd_pr__pfet_01v8[gm]/@m.xm3.msky130_fd_pr__pfet_01v8[gds]
+let gmgds4= @m.xm4.msky130_fd_pr__pfet_01v8[gm]/@m.xm4.msky130_fd_pr__pfet_01v8[gds]
+let gmgds5= @m.xm5.msky130_fd_pr__pfet_01v8[gm]/@m.xm5.msky130_fd_pr__pfet_01v8[gds]
+let gmgds6= @m.xm6.msky130_fd_pr__pfet_01v8[gm]/@m.xm6.msky130_fd_pr__pfet_01v8[gds]
+let gmgds7= @m.xm7.msky130_fd_pr__pfet_01v8[gm]/@m.xm7.msky130_fd_pr__pfet_01v8[gds]
+let gmgds8= @m.xm8.msky130_fd_pr__pfet_01v8[gm]/@m.xm8.msky130_fd_pr__pfet_01v8[gds]
+
+let w = 1u
+
+let ft1=@m.xm1.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm1.msky130_fd_pr__pfet_01v8[cgg])
+let ft2=@m.xm2.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm2.msky130_fd_pr__pfet_01v8[cgg])
+let ft3=@m.xm3.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm3.msky130_fd_pr__pfet_01v8[cgg])
+let ft4=@m.xm4.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm4.msky130_fd_pr__pfet_01v8[cgg])
+let ft5=@m.xm5.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm5.msky130_fd_pr__pfet_01v8[cgg])
+let ft6=@m.xm6.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm6.msky130_fd_pr__pfet_01v8[cgg])
+let ft7=@m.xm7.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm7.msky130_fd_pr__pfet_01v8[cgg])
+let ft8=@m.xm8.msky130_fd_pr__pfet_01v8[gm]/(2*3.14*@m.xm8.msky130_fd_pr__pfet_01v8[cgg])
+
+let idw1=@m.xm1.msky130_fd_pr__pfet_01v8[id]/w
+let idw2=@m.xm2.msky130_fd_pr__pfet_01v8[id]/w
+let idw3=@m.xm3.msky130_fd_pr__pfet_01v8[id]/w
+let idw4=@m.xm4.msky130_fd_pr__pfet_01v8[id]/w
+let idw5=@m.xm5.msky130_fd_pr__pfet_01v8[id]/w
+let idw6=@m.xm6.msky130_fd_pr__pfet_01v8[id]/w
+let idw7=@m.xm7.msky130_fd_pr__pfet_01v8[id]/w
+let idw8=@m.xm8.msky130_fd_pr__pfet_01v8[id]/w
+
+
+
+
+set appendwrite
+remzerovec
+.endc
+"
